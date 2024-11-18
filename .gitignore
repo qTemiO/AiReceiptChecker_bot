@@ -162,3 +162,4 @@ cython_debug/
 #.idea/
 models/best/config.json
 models/best/model.safetensors
+models/best.rar

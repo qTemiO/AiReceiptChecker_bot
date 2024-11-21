@@ -27,7 +27,10 @@ from operations import (
 
 dp = Dispatcher()
 device = "cuda" if torch.cuda.is_available() else "cpu"
-model = AutoModelForSequenceClassification.from_pretrained("models/best", num_labels=2)
+
+models_path = Path(__file__).parent.joinpath("models")
+
+model = AutoModelForSequenceClassification.from_pretrained(models_path.joinpath("best").__str__(), num_labels=2)
 model.to(device)
 tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-cased")
 logger.success("Models loaded")

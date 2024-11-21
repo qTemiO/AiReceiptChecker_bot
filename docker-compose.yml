@@ -7,6 +7,8 @@ services:
     volumes:
       - bot_data:/bot/data
       - bot_fake_data:/bot/fakedata
+    env_file:
+      - .env.production
 
 volumes:
   bot_data:

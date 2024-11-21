@@ -13,6 +13,4 @@ RUN poetry install --no-root
 
 COPY ./ ./
 
-WORKDIR /bot/app
-
 ENTRYPOINT [ "python", "main.py" ]
